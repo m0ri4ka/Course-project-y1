@@ -8,30 +8,30 @@ questionElement.innerText = `Результат множення ${num1} на ${
 
 const form = document.getElementById('form');
 const input = document.getElementById('inp');
-let scoreElement = document.getElementById('score');
+let frogsElement = document.getElementById('frogs');
 
-let score = Number(localStorage.getItem("score"));
-if(!score) {
-  score = 0;
+let frogs = Number(localStorage.getItem("frogs"));
+if(!frogs) {
+  frogs = 0;
 }
 
-scoreElement.textContent = `score : ${score}`;
+scoreElement.textContent = `frogs : ${frogs}`;
 
 form.addEventListener('submit',function() {
   let userAnswer = +input.value;
   if(correctAnswer === userAnswer) {
-    score++;
-    updateScore();
+    frogs++;
+    updateFrogs();
   }
   else {
-    score--;
-    updateScore();
+    frogs--;
+    updateFrogs();
   }
 });
 
-function updateScore() {
-  localStorage.setItem("score",String(score));
+function updateFrogs() {
+  localStorage.setItem("frogs",String(frogs));
 }
 
 
-// localStorage.removeItem("score");
+// localStorage.removeItem("frogs");
