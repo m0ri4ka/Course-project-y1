@@ -15,7 +15,7 @@ if(!frogs) {
   frogs = 0;
 }
 
-scoreElement.textContent = `frogs : ${frogs}`;
+frogsElement.textContent = `frogs : ${frogs}`;
 
 form.addEventListener('submit',function() {
   let userAnswer = +input.value;
