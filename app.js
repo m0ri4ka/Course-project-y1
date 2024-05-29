@@ -11,26 +11,25 @@ const input = document.getElementById('inp');
 let frogsElement = document.getElementById('frogs');
 
 let frogs = Number(localStorage.getItem("frogs"));
-if(!frogs) {
+if (!frogs) {
   frogs = 0;
 }
 
-frogsElement.textContent = `frogs : ${frogs}`;
+frogsElement.textContent = `Жабки : ${frogs}`;
 
-form.addEventListener('submit',function() {
+form.addEventListener('submit', function() {
   let userAnswer = +input.value;
-  if(correctAnswer === userAnswer) {
+  if (correctAnswer === userAnswer) {
     frogs++;
     updateFrogs();
-  }
-  else {
+  } else {
     frogs--;
     updateFrogs();
   }
 });
 
 function updateFrogs() {
-  localStorage.setItem("frogs",String(frogs));
+  localStorage.setItem("frogs", String(frogs));
 }
 
 
